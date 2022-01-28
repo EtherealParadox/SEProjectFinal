@@ -24,19 +24,19 @@ import com.orhanobut.dialogplus.ViewHolder;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp.myDataHolderEmp> {
+public class AdapterViewAdm extends FirebaseRecyclerAdapter<UserSignUp, AdapterViewAdm.myDataHolderAdm> {
 
-    public AdapterViewEmp(@NonNull FirebaseRecyclerOptions<User> options) {
+    public AdapterViewAdm(@NonNull FirebaseRecyclerOptions<UserSignUp> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myDataHolderEmp holder, int position, @NonNull User model) {
-        holder.name.setText("Name: " + model.getName());
-        holder.contact.setText("Contact: " + model.getContact());
-        holder.email.setText("Email: " + model.getEmail());
+    protected void onBindViewHolder(@NonNull AdapterViewAdm.myDataHolderAdm holder, int position, @NonNull UserSignUp model) {
+        holder.name.setText(model.getFname() + model.getLname());
+        holder.uname.setText(model.getUname());
+        holder.email.setText(model.getEmail());
 
-        holder.btnEdit.setOnClickListener(new android.view.View.OnClickListener() {
+        /*holder.btnEdit.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.name.getContext())
@@ -124,30 +124,30 @@ public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp
                 });
                 dialog.show();
             }
-        });
+        });*/
     }
 
     @NonNull
     @Override
-    public myDataHolderEmp onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        android.view.View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_row_design_view_emp, parent, false);
-        return new myDataHolderEmp(view);
+    public AdapterViewAdm.myDataHolderAdm onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        android.view.View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_row_design_view_adm, parent, false);
+        return new AdapterViewAdm.myDataHolderAdm(view);
     }
 
-    class myDataHolderEmp extends RecyclerView.ViewHolder{
+    class myDataHolderAdm extends RecyclerView.ViewHolder{
 
-        TextView name, contact, email;
+        TextView name, uname, email;
         Button btnEdit, btnDelete;
 
-        public myDataHolderEmp(@NonNull View itemView) {
+        public myDataHolderAdm(@NonNull View itemView) {
             super(itemView);
 
-            name = itemView.findViewById(R.id.textViewNameEmp);
-            contact = itemView.findViewById(R.id.textViewContactEmp);
-            email = itemView.findViewById(R.id.textViewEmailEmp);
+            name = itemView.findViewById(R.id.textViewNameAdm);
+            uname = itemView.findViewById(R.id.textViewUsernameAdm);
+            email = itemView.findViewById(R.id.textViewEmailAdm);
 
-            btnEdit = itemView.findViewById(R.id.buttonEditEmp);
-            btnDelete = itemView.findViewById(R.id.buttonDeleteEmp);
+            btnEdit = itemView.findViewById(R.id.buttonEditAdm);
+            btnDelete = itemView.findViewById(R.id.buttonDeleteAdm);
         }
     }
 }

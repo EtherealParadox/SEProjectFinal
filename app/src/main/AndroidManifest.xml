@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SEProjectFinal">
         <activity
+            android:name=".EmployeeUserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ViewEmployee"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
             android:name=".LocateVisitor"
             android:exported="false" />
         <activity

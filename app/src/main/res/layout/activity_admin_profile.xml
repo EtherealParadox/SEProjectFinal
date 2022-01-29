@@ -43,19 +43,20 @@
                 android:gravity="center_horizontal">
 
                 <ImageView
-                    android:id="@+id/imageViewLocate"
+                    android:id="@+id/imageViewLogs"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_marginTop="20dp"
-                    app:srcCompat="@drawable/ic_locate" />
+                    android:layout_marginBottom="20dp"
+                    app:srcCompat="@drawable/ic_logs" />
 
                 <Button
-                    android:id="@+id/buttonLocateAdm"
+                    android:id="@+id/buttonLogsAdm"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="37dp"
-                    android:text="Locate"
+                    android:text="Logs"
                     android:textAllCaps="false"
                     android:textSize="25sp" />
 
@@ -81,33 +82,6 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="37dp"
                     android:text="Modify"
-                    android:textAllCaps="false"
-                    android:textSize="25sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayoutProfileAdm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/linearLayoutLocateAdm"
-                android:gravity="center_horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewProfile"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    app:srcCompat="@drawable/ic_profile" />
-
-                <Button
-                    android:id="@+id/buttonProfileAdm"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="37dp"
-                    android:text="Profile"
                     android:textAllCaps="false"
                     android:textSize="25sp" />
 

@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +26,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     private Button buttonRegister;
 
     private FirebaseAuth mAuth;
+
+    boolean passwordVisible;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,31 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         editTextEmailAddressReg = findViewById(R.id.editTextEmailAddressReg);
         editTextUserNameReg = findViewById(R.id.editTextUserNameReg);
         editTextTextPasswordReg = findViewById(R.id.editTextTextPasswordReg);
+        editTextTextPasswordReg.setOnTouchListener(new android.view.View.OnTouchListener() {
+            @Override
+            public boolean onTouch(android.view.View v, MotionEvent event) {
+                final int right = 2;
+                if(event.getAction()==MotionEvent.ACTION_UP){
+                    if(event.getRawX()>=editTextTextPasswordReg.getRight()-editTextTextPasswordReg.getCompoundDrawables()[right].getBounds().width()) {
+                        int selection = editTextTextPasswordReg.getSelectionEnd();
+                        if (passwordVisible) {
+                            editTextTextPasswordReg.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_visibility_off, 0);
+                            editTextTextPasswordReg.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisible = false;
+                        }
+                        else{
+                            editTextTextPasswordReg.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_visibility_on, 0);
+                            editTextTextPasswordReg.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisible = true;
+                        }
+
+                        editTextTextPasswordReg.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
 
         buttonRegister = findViewById(R.id.buttonRegister);
         buttonRegister.setOnClickListener(this);

@@ -17,14 +17,28 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp.myDataHolderEmp> {
+
+    private FirebaseDatabase rootNode;
+    private DatabaseReference reference;
+    private FirebaseUser user;
+    private String userId;
 
     public AdapterViewEmp(@NonNull FirebaseRecyclerOptions<User> options) {
         super(options);
@@ -91,8 +105,33 @@ public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
-                                        Toast.makeText(holder.name.getContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
-                                        dialogPlus.dismiss();
+                                        user = FirebaseAuth.getInstance().getCurrentUser();
+                                        reference = FirebaseDatabase.getInstance().getReference("Employees");
+                                        userId = user.getUid();
+                                        reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                rootNode = FirebaseDatabase.getInstance();
+                                                reference = rootNode.getReference("EmployeesLogs");
+                                                UserSignUp userSignUp = snapshot.getValue(UserSignUp.class);
+                                                String si = "Edited " + model.getEmail();
+                                                String em = userSignUp.email;
+                                                UserEmployeeStatusLogs userEmployeeStatusLogs = new UserEmployeeStatusLogs(em, getDate(), getTime(), si);
+                                                String key = reference.push().getKey();
+                                                reference.child(key).setValue(userEmployeeStatusLogs);
+
+                                                Toast.makeText(holder.name.getContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+                                                dialogPlus.dismiss();
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+                                                Toast.makeText(holder.name.getContext(),"Something wrong happened", Toast.LENGTH_SHORT).show();
+                                                dialogPlus.dismiss();
+                                            }
+                                        });
+
+
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
@@ -116,9 +155,32 @@ public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp
                 dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        FirebaseDatabase.getInstance().getReference().child("Visitors")
-                                .child(getRef(holder.getAdapterPosition()).getKey())
-                                .removeValue();
+                        user = FirebaseAuth.getInstance().getCurrentUser();
+                        reference = FirebaseDatabase.getInstance().getReference("Employees");
+                        userId = user.getUid();
+                        reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                rootNode = FirebaseDatabase.getInstance();
+                                reference = rootNode.getReference("EmployeesLogs");
+                                UserSignUp userSignUp = snapshot.getValue(UserSignUp.class);
+                                String si = "Deleted " + model.getEmail();
+                                String em = userSignUp.email;
+                                UserEmployeeStatusLogs userEmployeeStatusLogs = new UserEmployeeStatusLogs(em, getDate(), getTime(), si);
+                                String key = reference.push().getKey();
+                                reference.child(key).setValue(userEmployeeStatusLogs);
+
+                                FirebaseDatabase.getInstance().getReference().child("Visitors")
+                                        .child(getRef(holder.getAdapterPosition()).getKey())
+                                        .removeValue();
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                                Toast.makeText(holder.name.getContext(),"Something wrong happened", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
                     }
                 });
                 dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -154,5 +216,13 @@ public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp
             btnEdit = itemView.findViewById(R.id.buttonEditEmp);
             btnDelete = itemView.findViewById(R.id.buttonDeleteEmp);
         }
+    }
+
+    private String getTime() {
+        return new SimpleDateFormat("hh:mm a", Locale.getDefault()).format(new Date());
+    }
+
+    private String getDate() {
+        return new SimpleDateFormat("dd/LLL/yyyy", Locale.getDefault()).format(new Date());
     }
 }

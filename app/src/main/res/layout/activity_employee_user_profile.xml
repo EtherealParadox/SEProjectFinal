@@ -44,7 +44,7 @@
             android:textColor="@color/teal_800"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:textSize="27sp" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/textViewUserNameEup"
@@ -58,7 +58,7 @@
             android:textColor="@color/teal_800"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:textSize="27sp" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/textViewEmailEup"
@@ -72,7 +72,7 @@
             android:textColor="@color/teal_800"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:textSize="27sp" />
+            android:textSize="22sp" />
 
         <Button
             android:id="@+id/buttonLogoutEup"
@@ -87,7 +87,7 @@
             android:paddingRight="10dp"
             android:text="Log out"
             android:textAllCaps="false"
-            android:textSize="26sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 

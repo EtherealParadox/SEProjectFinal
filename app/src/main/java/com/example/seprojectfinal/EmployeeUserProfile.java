@@ -74,9 +74,9 @@ public class EmployeeUserProfile extends AppCompatActivity {
                     String fname = userSignUp.fname;
                     String lname = userSignUp.lname;
 
-                    textViewFullNameEup.setText("Name: " + fname + " " + lname);
-                    textViewUserNameEup.setText("Username: " + uname);
-                    textViewEmailEup.setText("Email: " + email);
+                    textViewFullNameEup.setText("Name: \n"  + fname + " " + lname);
+                    textViewUserNameEup.setText("Username: \n" + uname);
+                    textViewEmailEup.setText("Email: \n" + email);
                 }
 
             }

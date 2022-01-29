@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class AdminProfile extends AppCompatActivity implements View.OnClickListener {
 
-    private Button buttonModifyAdm, buttonLocateAdm;
+    private Button buttonModifyAdm, buttonLocateAdm, buttonLogoutAdm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,9 @@ public class AdminProfile extends AppCompatActivity implements View.OnClickListe
 
         buttonLocateAdm = findViewById(R.id.buttonLogsAdm);
         buttonLocateAdm.setOnClickListener(this);
+
+        buttonLogoutAdm = findViewById(R.id.buttonLogoutAdm);
+        buttonLogoutAdm.setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +49,10 @@ public class AdminProfile extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonLogsAdm:
                 Intent intent1 = new Intent(AdminProfile.this, ViewLogs.class);
                 startActivity(intent1);
+                break;
+            case R.id.buttonLogoutAdm:
+                Intent intent2 = new Intent(AdminProfile.this, Home.class);
+                startActivity(intent2);
                 break;
         }
     }

@@ -98,6 +98,7 @@
             android:background="@drawable/rounded"
             android:hint="Password"
             android:inputType="textPassword"
+            android:drawableRight="@drawable/ic_visibility_off"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:textSize="27sp" />

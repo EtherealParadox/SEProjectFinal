@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name is here"
-            android:textSize="25sp"
+            android:textSize="22sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
@@ -26,11 +26,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewAge"
+            android:id="@+id/textViewDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Age is here"
-            android:textSize="25sp"
+            android:text="Date is here"
+            android:textSize="22sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
@@ -39,17 +39,30 @@
             android:layout_below="@+id/textViewName"/>
 
         <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time is here"
+            android:textSize="22sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="#808080"
+            android:background="@color/teal_200"
+            android:textStyle="bold"
+            android:layout_below="@+id/textViewDate"/>
+
+        <TextView
             android:id="@+id/textViewTemperature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Temperature is here"
-            android:textSize="25sp"
+            android:textSize="22sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
             android:background="@drawable/bottom_rounded"
             android:textStyle="bold"
-            android:layout_below="@+id/textViewAge"/>
+            android:layout_below="@+id/textViewTime"/>
 
     </RelativeLayout>
 

@@ -1,15 +1,16 @@
 package com.example.seprojectfinal;
 
 public class UserView {
-    String name, age, temperature;
+    String name, date, time,temperature;
 
     public UserView(){
 
     }
 
-    public UserView(String name, String age, String temperature){
+    public UserView(String name, String date, String time, String temperature){
         this.name = name;
-        this.age = age;
+        this.date = date;
+        this.time = time;
         this.temperature = temperature;
     }
 
@@ -21,12 +22,20 @@ public class UserView {
         this.name = name;
     }
 
-    public String getAge() {
-        return age;
+    public String getDate() {
+        return date;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getTemperature() {

@@ -20,7 +20,8 @@ public class AdapterView  extends FirebaseRecyclerAdapter <UserView, AdapterView
     @Override
     protected void onBindViewHolder(@NonNull myDataHolderView holder, int position, @NonNull UserView model) {
         holder.name.setText("Name: " + model.getName());
-        holder.age.setText("Age: " + model.getAge());
+        holder.date.setText("Date: " + model.getDate());
+        holder.time.setText("Time: " + model.getTime());
         holder.temp.setText("Temperature: " + model.getTemperature() + "°C");
     }
 
@@ -33,13 +34,14 @@ public class AdapterView  extends FirebaseRecyclerAdapter <UserView, AdapterView
 
     public class myDataHolderView extends RecyclerView.ViewHolder{
 
-        TextView name, age, temp;
+        TextView name, date, time, temp;
 
         public myDataHolderView(@NonNull View itemView) {
             super(itemView);
 
             name = itemView.findViewById(R.id.textViewName);
-            age = itemView.findViewById(R.id.textViewAge);
+            date = itemView.findViewById(R.id.textViewDate);
+            time = itemView.findViewById(R.id.textViewTime);
             temp = itemView.findViewById(R.id.textViewTemperature);
 
         }

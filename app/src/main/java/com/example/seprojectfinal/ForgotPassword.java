@@ -42,6 +42,13 @@ public class ForgotPassword extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(ForgotPassword.this, SignIn.class);
+        startActivity(intent);
+        finish();
+    }
+
     private void resetPassword() {
         String email = editTextEmailAddressForgot.getText().toString().trim();
 
@@ -65,7 +72,7 @@ public class ForgotPassword extends AppCompatActivity {
                     Toast.makeText(ForgotPassword.this, "Check your email to reset your password", Toast.LENGTH_LONG).show();
                 }
                 else{
-                    Toast.makeText(ForgotPassword.this, "Something went wrong, Try again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ForgotPassword.this, "The email you entered is not in our database", Toast.LENGTH_LONG).show();
                 }
             }
         });

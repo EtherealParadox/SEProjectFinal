@@ -2,13 +2,13 @@ package com.example.seprojectfinal;
 
 public class User {
 
-    String temperature, name, email, address, age, gender, symptoms, contact, destination;
+    String temperature, name, email, address, age, gender, symptoms, contact, destination, date, time;
 
     public User() {
 
     }
 
-    public User(String temperature, String name, String email, String address, String age, String gender, String symptoms, String contact, String destination) {
+    public User(String temperature, String name, String email, String address, String age, String gender, String symptoms, String contact, String destination, String date, String time) {
         this.temperature = temperature;
         this.name = name;
         this.email = email;
@@ -18,6 +18,8 @@ public class User {
         this.symptoms = symptoms;
         this.contact = contact;
         this.destination = destination;
+        this.date = date;
+        this.time = time;
     }
 
     public String getTemperature() {
@@ -90,5 +92,21 @@ public class User {
 
     public void setDestination(String destination) {
         this.destination = destination;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

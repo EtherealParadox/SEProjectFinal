@@ -18,6 +18,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class Home extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationViewHome;
@@ -144,6 +148,12 @@ public class Home extends AppCompatActivity {
             return;
         }
 
+        if (contact.length() > 11) {
+            editTextContactHome.setError("Contact length is only 11 numbers!");
+            editTextContactHome.requestFocus();
+            return;
+        }
+
         if (destination.isEmpty()) {
             editTextDestinationHome.setError("Destination is required");
             editTextDestinationHome.requestFocus();
@@ -158,7 +168,7 @@ public class Home extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Entering your data to the database", Toast.LENGTH_LONG).show();
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("Visitors");
-                User user = new User(temperature, name, email, address, age, gender, symptoms, contact, destination);
+                User user = new User(temperature, name, email, address, age, gender, symptoms, contact, destination, getDate(),getTime());
                 String key = reference.push().getKey();
                 reference.child(key).setValue(user);
                 editTextTemperatureHome.setText("");
@@ -175,5 +185,13 @@ public class Home extends AppCompatActivity {
         dialog.setNegativeButton("No", null);
         AlertDialog alert = dialog.create();
         alert.show();
+    }
+
+    private String getTime() {
+        return new SimpleDateFormat("hh:mm a", Locale.getDefault()).format(new Date());
+    }
+
+    private String getDate() {
+        return new SimpleDateFormat("dd/LLL/yyyy", Locale.getDefault()).format(new Date());
     }
 }

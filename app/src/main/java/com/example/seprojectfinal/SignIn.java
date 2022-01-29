@@ -16,12 +16,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class SignIn extends AppCompatActivity implements android.view.View.OnClickListener {
 
@@ -32,6 +32,8 @@ public class SignIn extends AppCompatActivity implements android.view.View.OnCli
     private Button buttonSignIn;
 
     private FirebaseAuth mAuth;
+    private FirebaseDatabase rootNode;
+    private DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +82,6 @@ public class SignIn extends AppCompatActivity implements android.view.View.OnCli
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         Intent intent = new Intent(SignIn.this, Home.class);
         startActivity(intent);
         finish();
@@ -122,6 +123,8 @@ public class SignIn extends AppCompatActivity implements android.view.View.OnCli
         }
 
         if (editTextEmailAddressSignIn.getText().toString().equals("admin@gmail.com") && editTextTextPasswordSignIn.getText().toString().equals("admin123")) {
+            editTextEmailAddressSignIn.setText("");
+            editTextTextPasswordSignIn.setText("");
             Intent intent = new Intent(getApplicationContext(), AdminProfile.class);
             startActivity(intent);
         }
@@ -131,6 +134,14 @@ public class SignIn extends AppCompatActivity implements android.view.View.OnCli
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
+                        editTextEmailAddressSignIn.setText("");
+                        editTextTextPasswordSignIn.setText("");
+                        rootNode = FirebaseDatabase.getInstance();
+                        reference = rootNode.getReference("EmployeesLogs");
+                        String si = "Logged In";
+                        UserEmployeeStatusLogs userEmployeeStatusLogs = new UserEmployeeStatusLogs(email, getDate(), getTime(), si);
+                        String key = reference.push().getKey();
+                        reference.child(key).setValue(userEmployeeStatusLogs);
                         Intent intent = new Intent(getApplicationContext(), EmployeeProfile.class);
                         startActivity(intent);
                     }
@@ -144,6 +155,14 @@ public class SignIn extends AppCompatActivity implements android.view.View.OnCli
                 Toast.makeText(getApplicationContext(), "Failed to Login, Please check your credentials", Toast.LENGTH_LONG).show();
             }
         }
+
+    private String getTime() {
+        return new SimpleDateFormat("hh:mm a", Locale.getDefault()).format(new Date());
+    }
+
+    private String getDate() {
+        return new SimpleDateFormat("dd/LLL/yyyy", Locale.getDefault()).format(new Date());
+    }
 
 }
 

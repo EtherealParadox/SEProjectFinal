@@ -46,25 +46,28 @@ public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp
 
                 android.view.View view = dialogPlus.getHolderView();
 
+                EditText temp = view.findViewById(R.id.editTextTemperatureGlideEmp);
                 EditText name = view.findViewById(R.id.editTextNameGlideEmp);
                 EditText email = view.findViewById(R.id.editTextEmailGlideEmp);
                 EditText address = view.findViewById(R.id.editTextAddressGlideEmp);
                 EditText age = view.findViewById(R.id.editTextAgeGlideEmp);
                 EditText gender = view.findViewById(R.id.editTextGenderGlideEmp);
-                EditText destination = view.findViewById(R.id.editTextDestinationGlideEmp);
+                EditText symp = view.findViewById(R.id.editTextSymptomsGlideEmp);
                 EditText contact = view.findViewById(R.id.editTextNumberGlideEmp);
-                EditText temp = view.findViewById(R.id.editTextTemperatureGlideEmp);
+                EditText destination = view.findViewById(R.id.editTextDestinationGlideEmp);
+
 
                 Button btnUpdate = view.findViewById(R.id.btnUpdateEmp);
 
+                temp.setText(model.getTemperature());
                 name.setText(model.getName());
                 email.setText(model.getEmail());
                 address.setText(model.getAddress());
                 age.setText(model.getAge());
                 gender.setText(model.getGender());
-                destination.setText(model.getDestination());
+                symp.setText(model.getSymptoms());
                 contact.setText(model.getContact());
-                temp.setText(model.getTemperature());
+                destination.setText(model.getDestination());
 
                 dialogPlus.show();
 
@@ -72,14 +75,16 @@ public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp
                     @Override
                     public void onClick(android.view.View v) {
                         Map<String, Object> map = new HashMap<>();
+                        map.put("temperature", temp.getText().toString());
                         map.put("name", name.getText().toString());
                         map.put("email", email.getText().toString());
                         map.put("address", address.getText().toString());
                         map.put("age", age.getText().toString());
                         map.put("gender", gender.getText().toString());
-                        map.put("destination", destination.getText().toString());
+                        map.put("symptoms", symp.getText().toString());
                         map.put("contact", contact.getText().toString());
-                        map.put("temperature", temp.getText().toString());
+                        map.put("destination", destination.getText().toString());
+
 
                         FirebaseDatabase.getInstance().getReference().child("Visitors")
                                 .child(getRef(holder.getAdapterPosition()).getKey()).updateChildren(map)

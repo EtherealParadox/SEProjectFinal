@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SEProjectFinal">
         <activity
+            android:name=".ViewLogs"
+            android:exported="false" />
+        <activity
             android:name=".EmployeeUserProfile"
             android:exported="false" />
         <activity

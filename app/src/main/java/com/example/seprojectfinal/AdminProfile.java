@@ -23,7 +23,7 @@ public class AdminProfile extends AppCompatActivity implements View.OnClickListe
         buttonModifyAdm = findViewById(R.id.buttonModifyAdm);
         buttonModifyAdm.setOnClickListener(this);
 
-        buttonLocateAdm = findViewById(R.id.buttonLocateAdm);
+        buttonLocateAdm = findViewById(R.id.buttonLogsAdm);
         buttonLocateAdm.setOnClickListener(this);
     }
 
@@ -43,8 +43,8 @@ public class AdminProfile extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(AdminProfile.this, ViewEmployee.class);
                 startActivity(intent);
                 break;
-            case R.id.buttonLocateAdm:
-                Intent intent1 = new Intent(AdminProfile.this, ForgotPassword.class);
+            case R.id.buttonLogsAdm:
+                Intent intent1 = new Intent(AdminProfile.this, ViewLogs.class);
                 startActivity(intent1);
                 break;
         }

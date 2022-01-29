@@ -18,13 +18,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class EmployeeUserProfile extends AppCompatActivity {
 
     private Button Logout;
 
-    private FirebaseUser user, user2;
-    private DatabaseReference reference, reference2;
-    private String userId,userId2;
+    private FirebaseUser user;
+    private DatabaseReference reference;
+    private FirebaseDatabase rootNode;
+    private String userId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,12 @@ public class EmployeeUserProfile extends AppCompatActivity {
         Logout.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                rootNode = FirebaseDatabase.getInstance();
+                reference = rootNode.getReference("EmployeesLogs");
+                String si = "Logged Out";
+                UserEmployeeStatusLogs userEmployeeStatusLogs = new UserEmployeeStatusLogs(FirebaseAuth.getInstance().getCurrentUser().getEmail(), getDate(), getTime(), si);
+                String key = reference.push().getKey();
+                reference.child(key).setValue(userEmployeeStatusLogs);
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(EmployeeUserProfile.this, Home.class);
                 startActivity(intent);
@@ -74,5 +86,13 @@ public class EmployeeUserProfile extends AppCompatActivity {
                 Toast.makeText(EmployeeUserProfile.this, "Something wrong happened", Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    private String getTime() {
+        return new SimpleDateFormat("hh:mm a", Locale.getDefault()).format(new Date());
+    }
+
+    private String getDate() {
+        return new SimpleDateFormat("dd/LLL/yyyy", Locale.getDefault()).format(new Date());
     }
 }

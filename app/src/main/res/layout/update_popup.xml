@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -25,23 +26,46 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="Temperature"
                 android:textSize="25sp"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="5dp"/>
 
             <EditText
-                android:id="@+id/editTextNameGlideEmp"
+                android:id="@+id/editTextTemperatureGlideEmp"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:textSize="25sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
                 android:gravity="center"
+                android:textSize="25sp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="25sp"
+                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/editTextNameGlideEmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_frame"
+                android:gravity="center"
+                android:textSize="25sp"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -55,14 +79,15 @@
             <EditText
                 android:id="@+id/editTextEmailGlideEmp"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:textSize="25sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
                 android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"/>
+                android:textSize="25sp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -76,14 +101,15 @@
             <EditText
                 android:id="@+id/editTextAddressGlideEmp"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:textSize="25sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
                 android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"/>
+                android:textSize="25sp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -97,14 +123,15 @@
             <EditText
                 android:id="@+id/editTextAgeGlideEmp"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:textSize="25sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
                 android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"/>
+                android:textSize="25sp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -118,14 +145,59 @@
             <EditText
                 android:id="@+id/editTextGenderGlideEmp"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:textSize="25sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
                 android:gravity="center"
+                android:textSize="25sp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Symptoms"
+                android:textSize="25sp"
+                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/editTextSymptomsGlideEmp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_frame"
+                android:gravity="center"
+                android:textSize="25sp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Number"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/editTextNumberGlideEmp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_frame"
+                android:gravity="center"
+                android:textSize="25sp"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -139,47 +211,7 @@
             <EditText
                 android:id="@+id/editTextDestinationGlideEmp"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:textSize="25sp"
-                android:background="@drawable/rounded_frame"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contact Number"
-                android:textSize="25sp"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-
-            <EditText
-                android:id="@+id/editTextNumberGlideEmp"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:textSize="25sp"
-                android:background="@drawable/rounded_frame"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Temperature"
-                android:textSize="25sp"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-
-            <EditText
-                android:id="@+id/editTextTemperatureGlideEmp"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
                 android:textSize="25sp"
                 android:background="@drawable/rounded_frame"
                 android:gravity="center"

@@ -64,7 +64,7 @@ public class ViewEmployee extends AppCompatActivity {
     private void textSearch(String txt){
         FirebaseRecyclerOptions<UserSignUp> options =
                 new FirebaseRecyclerOptions.Builder<UserSignUp>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Employees").orderByChild("name").startAt(txt).endAt(txt + "~"), UserSignUp.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Employees").orderByChild("fname").startAt(txt).endAt(txt + "~"), UserSignUp.class)
                         .build();
 
         adapterViewAdm = new AdapterViewAdm(options);

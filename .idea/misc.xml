@@ -13,7 +13,7 @@
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_about.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_admin_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_employee_profile.xml" value="0.18" />
-        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_employee_user_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_employee_user_profile.xml" value="0.5" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_info.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_locate_visitor.xml" value="0.20416666666666666" />
@@ -30,6 +30,7 @@
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/single_row_design_view_emp.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/single_row_design_view_loc.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/update_popup.xml" value="0.20416666666666666" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/update_popup_adm.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/menu/menu_navigation.xml" value="0.20416666666666666" />
       </map>
     </option>

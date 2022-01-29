@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class EmployeeProfile extends AppCompatActivity implements View.OnClickListener {
@@ -34,6 +35,7 @@ public class EmployeeProfile extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(EmployeeProfile.this, Home.class);
         startActivity(intent);
         finish();

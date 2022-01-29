@@ -36,35 +36,25 @@ public class AdapterViewAdm extends FirebaseRecyclerAdapter<UserSignUp, AdapterV
         holder.uname.setText(model.getUname());
         holder.email.setText(model.getEmail());
 
-        /*holder.btnEdit.setOnClickListener(new android.view.View.OnClickListener() {
+        holder.btnEdit.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.name.getContext())
-                        .setContentHolder(new ViewHolder(R.layout.update_popup))
-                        .setExpanded(true, 1500)
+                        .setContentHolder(new ViewHolder(R.layout.update_popup_adm))
+                        .setExpanded(true, 1300)
                         .create();
 
                 android.view.View view = dialogPlus.getHolderView();
 
-                EditText name = view.findViewById(R.id.editTextNameGlideEmp);
-                EditText email = view.findViewById(R.id.editTextEmailGlideEmp);
-                EditText address = view.findViewById(R.id.editTextAddressGlideEmp);
-                EditText age = view.findViewById(R.id.editTextAgeGlideEmp);
-                EditText gender = view.findViewById(R.id.editTextGenderGlideEmp);
-                EditText destination = view.findViewById(R.id.editTextDestinationGlideEmp);
-                EditText contact = view.findViewById(R.id.editTextNumberGlideEmp);
-                EditText temp = view.findViewById(R.id.editTextTemperatureGlideEmp);
+                EditText fname = view.findViewById(R.id.editTextFNameGlideAdm);
+                EditText lname = view.findViewById(R.id.editTextLNameGlideAdm);
+                EditText uname = view.findViewById(R.id.editTextUNameGlideAdm);
 
-                Button btnUpdate = view.findViewById(R.id.btnUpdateEmp);
+                Button btnUpdate = view.findViewById(R.id.btnUpdateAdm);
 
-                name.setText(model.getName());
-                email.setText(model.getEmail());
-                address.setText(model.getAddress());
-                age.setText(model.getAge());
-                gender.setText(model.getGender());
-                destination.setText(model.getDestination());
-                contact.setText(model.getContact());
-                temp.setText(model.getTemperature());
+                fname.setText(model.getFname());
+                lname.setText(model.getLname());
+                uname.setText(model.getUname());
 
                 dialogPlus.show();
 
@@ -72,16 +62,11 @@ public class AdapterViewAdm extends FirebaseRecyclerAdapter<UserSignUp, AdapterV
                     @Override
                     public void onClick(android.view.View v) {
                         Map<String, Object> map = new HashMap<>();
-                        map.put("name", name.getText().toString());
-                        map.put("email", email.getText().toString());
-                        map.put("address", address.getText().toString());
-                        map.put("age", age.getText().toString());
-                        map.put("gender", gender.getText().toString());
-                        map.put("destination", destination.getText().toString());
-                        map.put("contact", contact.getText().toString());
-                        map.put("temperature", temp.getText().toString());
+                        map.put("fname", fname.getText().toString());
+                        map.put("lname", lname.getText().toString());
+                        map.put("uname", uname.getText().toString());
 
-                        FirebaseDatabase.getInstance().getReference().child("Visitors")
+                        FirebaseDatabase.getInstance().getReference().child("Employees")
                                 .child(getRef(holder.getAdapterPosition()).getKey()).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
@@ -111,7 +96,7 @@ public class AdapterViewAdm extends FirebaseRecyclerAdapter<UserSignUp, AdapterV
                 dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        FirebaseDatabase.getInstance().getReference().child("Visitors")
+                        FirebaseDatabase.getInstance().getReference().child("Employees")
                                 .child(getRef(holder.getAdapterPosition()).getKey())
                                 .removeValue();
                     }
@@ -124,7 +109,7 @@ public class AdapterViewAdm extends FirebaseRecyclerAdapter<UserSignUp, AdapterV
                 });
                 dialog.show();
             }
-        });*/
+        });
     }
 
     @NonNull

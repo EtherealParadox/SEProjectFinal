@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class AdminProfile extends AppCompatActivity implements View.OnClickListener {
 
     private Button buttonModifyAdm, buttonLocateAdm;
@@ -28,6 +30,7 @@ public class AdminProfile extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(AdminProfile.this, Home.class);
         startActivity(intent);
         finish();

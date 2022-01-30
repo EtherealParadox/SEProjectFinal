@@ -41,7 +41,7 @@ public class AdapterViewAdm extends FirebaseRecyclerAdapter<UserSignUp, AdapterV
             public void onClick(android.view.View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.name.getContext())
                         .setContentHolder(new ViewHolder(R.layout.update_popup_adm))
-                        .setExpanded(true, 1300)
+                        .setExpanded(true, 950)
                         .create();
 
                 android.view.View view = dialogPlus.getHolderView();

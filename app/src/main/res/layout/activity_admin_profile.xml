@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -29,39 +30,12 @@
             tools:layout_editor_absoluteY="49dp" />
 
         <RelativeLayout
-            android:layout_width="350dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded2"
             android:orientation="vertical"
             tools:layout_editor_absoluteX="30dp"
             tools:layout_editor_absoluteY="190dp">
-
-            <LinearLayout
-                android:id="@+id/linearLayoutLocateAdm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/linearLayoutModifyAdm"
-                android:gravity="center_horizontal">
-
-                <ImageView
-                    android:id="@+id/imageViewLogs"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    app:srcCompat="@drawable/ic_logs" />
-
-                <Button
-                    android:id="@+id/buttonLogsAdm"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="37dp"
-                    android:text="Logs"
-                    android:textAllCaps="false"
-                    android:textSize="25sp" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayoutModifyAdm"
@@ -71,22 +45,52 @@
 
                 <ImageView
                     android:id="@+id/imageViewModify"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
                     app:srcCompat="@drawable/ic_viewlist" />
 
                 <Button
                     android:id="@+id/buttonModifyAdm"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="37dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical"
                     android:text="Modify"
                     android:textAllCaps="false"
                     android:textSize="25sp" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLogsAdm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutModifyAdm"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewLogs"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_logs" />
+
+                <Button
+                    android:id="@+id/buttonLogsAdm"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Logs"
+                    android:textAllCaps="false"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+
 
         </RelativeLayout>
 

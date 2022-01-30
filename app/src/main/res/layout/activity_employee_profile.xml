@@ -45,20 +45,21 @@
 
                 <ImageView
                     android:id="@+id/imageViewModify"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
                     app:srcCompat="@drawable/ic_viewlist" />
 
                 <Button
                     android:id="@+id/buttonModifyEmp"
-                    android:layout_width="130dp"
+                    android:layout_width="115dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="27dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical"
                     android:text="Modify"
                     android:textAllCaps="false"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
             </LinearLayout>
 
@@ -71,20 +72,21 @@
 
                 <ImageView
                     android:id="@+id/imageViewLocate"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
                     app:srcCompat="@drawable/ic_locate" />
 
                 <Button
                     android:id="@+id/buttonLocateEmp"
-                    android:layout_width="130dp"
+                    android:layout_width="115dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="27dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical"
                     android:text="Locate"
                     android:textAllCaps="false"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
             </LinearLayout>
 
@@ -98,20 +100,21 @@
 
                 <ImageView
                     android:id="@+id/imageViewReport"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
                     app:srcCompat="@drawable/ic_report" />
 
                 <Button
                     android:id="@+id/buttonReportEmp"
-                    android:layout_width="130dp"
+                    android:layout_width="115dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="27dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical"
                     android:text="Report"
                     android:textAllCaps="false"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
             </LinearLayout>
 
@@ -124,21 +127,21 @@
 
                 <ImageView
                     android:id="@+id/imageViewProfile"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
                     app:srcCompat="@drawable/ic_profile" />
 
                 <Button
                     android:id="@+id/buttonProfileEmp"
-                    android:layout_width="130dp"
+                    android:layout_width="115dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="27dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical"
                     android:text="Profile"
                     android:textAllCaps="false"
-                    android:textSize="25sp" />
+                    android:textSize="22sp" />
 
             </LinearLayout>
 

@@ -72,6 +72,13 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     }
 
     @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Register.this, SignIn.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonRegister:

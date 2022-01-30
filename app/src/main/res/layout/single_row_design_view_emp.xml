@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name is here"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Contact is here"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
@@ -39,17 +39,30 @@
             android:layout_below="@+id/textViewNameEmp"/>
 
         <TextView
+            android:id="@+id/textViewDateTimeEmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DateTime is here"
+            android:textSize="17sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="#808080"
+            android:background="@color/teal_200"
+            android:textStyle="bold"
+            android:layout_below="@+id/textViewContactEmp"/>
+
+        <TextView
             android:id="@+id/textViewEmailEmp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Email is here"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
             android:background="@drawable/bottom_rounded"
             android:textStyle="bold"
-            android:layout_below="@+id/textViewContactEmp"/>
+            android:layout_below="@+id/textViewDateTimeEmp"/>
 
         <LinearLayout
             android:layout_marginTop="5dp"
@@ -61,7 +74,7 @@
 
             <Button
                 android:id="@+id/buttonEditEmp"
-                android:layout_width="150dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/super_rounded"
                 android:text="Edit"
@@ -70,7 +83,7 @@
 
             <Button
                 android:id="@+id/buttonDeleteEmp"
-                android:layout_width="150dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/super_rounded"
                 android:text="Delete"

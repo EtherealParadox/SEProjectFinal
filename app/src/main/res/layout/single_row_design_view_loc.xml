@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name is here"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
@@ -29,8 +29,8 @@
             android:id="@+id/textViewContactLoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Age is here"
-            android:textSize="20sp"
+            android:text="Contact is here"
+            android:textSize="17sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
@@ -39,17 +39,30 @@
             android:layout_below="@+id/textViewNameLoc"/>
 
         <TextView
-            android:id="@+id/textViewEmailLoc"
+            android:id="@+id/textViewAddressLoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Temperature is here"
-            android:textSize="20sp"
+            android:text="Address is here"
+            android:textSize="17sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="#808080"
+            android:background="@color/teal_200"
+            android:textStyle="bold"
+            android:layout_below="@+id/textViewContactLoc"/>
+
+        <TextView
+            android:id="@+id/textViewDestinationLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Destination is here"
+            android:textSize="17sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
             android:background="@drawable/bottom_rounded"
             android:textStyle="bold"
-            android:layout_below="@+id/textViewContactLoc"/>
+            android:layout_below="@+id/textViewAddressLoc"/>
 
         <LinearLayout
             android:layout_marginTop="5dp"
@@ -57,11 +70,11 @@
             android:layout_height="40dp"
             android:orientation="horizontal"
             android:gravity="center_horizontal"
-            android:layout_below="@id/textViewEmailLoc">
+            android:layout_below="@id/textViewDestinationLoc">
 
             <Button
                 android:id="@+id/buttonLocLoc"
-                android:layout_width="150dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/super_rounded"
                 android:text="Locate"

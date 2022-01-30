@@ -44,16 +44,17 @@ public class AdapterViewLoc extends FirebaseRecyclerAdapter<User, AdapterViewLoc
 
     @Override
     protected void onBindViewHolder(@NonNull myViewHolderLocate holder, int position, @NonNull User model) {
-        holder.name.setText(model.getName());
-        holder.contact.setText(model.getContact());
-        holder.email.setText(model.getEmail());
+        holder.name.setText("Name: " + model.getName());
+        holder.contact.setText("Contact: " + model.getContact());
+        holder.address.setText("Address: " + model.getAddress());
+        holder.destination.setText("Destination: " + model.getDestination());
 
         holder.btnLoc.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.name.getContext())
                         .setContentHolder(new ViewHolder(R.layout.locate_popup))
-                        .setExpanded(true, 1000)
+                        .setExpanded(true, 700)
                         .create();
 
                 android.view.View view = dialogPlus.getHolderView();
@@ -123,7 +124,7 @@ public class AdapterViewLoc extends FirebaseRecyclerAdapter<User, AdapterViewLoc
 
     class myViewHolderLocate extends RecyclerView.ViewHolder{
 
-        TextView name, contact, email;
+        TextView name, contact, address, destination;
 
         Button btnLoc;
 
@@ -132,7 +133,8 @@ public class AdapterViewLoc extends FirebaseRecyclerAdapter<User, AdapterViewLoc
 
             name = itemView.findViewById(R.id.textViewNameLoc);
             contact = itemView.findViewById(R.id.textViewContactLoc);
-            email = itemView.findViewById(R.id.textViewEmailLoc);
+            address = itemView.findViewById(R.id.textViewAddressLoc);
+            destination = itemView.findViewById(R.id.textViewDestinationLoc);
 
             btnLoc = itemView.findViewById(R.id.buttonLocLoc);
         }

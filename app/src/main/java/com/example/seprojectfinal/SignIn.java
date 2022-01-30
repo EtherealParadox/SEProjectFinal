@@ -155,20 +155,13 @@ public class SignIn extends AppCompatActivity implements android.view.View.OnCli
             return;
         }
 
-        if (editTextEmailAddressSignIn.getText().toString().equals("admin@gmail.com") && editTextTextPasswordSignIn.getText().toString().equals("admin123")) {
-            editTextEmailAddressSignIn.setText("");
-            editTextTextPasswordSignIn.setText("");
-            Intent intent = new Intent(getApplicationContext(), AdminProfile.class);
-            startActivity(intent);
-        }
-        else if (!editTextEmailAddressSignIn.getText().toString().equals("admin@gmail.com") && !editTextTextPasswordSignIn.getText().toString().equals("admin123")) {
-            mAuth = FirebaseAuth.getInstance();
-            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    if(user.isEmailVerified()){
-                        if (task.isSuccessful()) {
+        mAuth = FirebaseAuth.getInstance();
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    if (task.isSuccessful()) {
+                        if(user.isEmailVerified()) {
                             editTextEmailAddressSignIn.setText("");
                             editTextTextPasswordSignIn.setText("");
                             rootNode = FirebaseDatabase.getInstance();
@@ -180,22 +173,23 @@ public class SignIn extends AppCompatActivity implements android.view.View.OnCli
                             Intent intent = new Intent(getApplicationContext(), EmployeeProfile.class);
                             startActivity(intent);
                         }
-                        else {
-                            Toast.makeText(getApplicationContext(), "Failed to Login, Please check your credentials", Toast.LENGTH_LONG).show();
+                        else{
+                            user.sendEmailVerification();
+                            Toast.makeText(getApplicationContext(), "Check your email to verify your account", Toast.LENGTH_SHORT).show();
                         }
                     }
-                    else{
-                        user.sendEmailVerification();
-                        Toast.makeText(SignIn.this, "Check your email to verify your account", Toast.LENGTH_LONG).show();
+                    else if (editTextEmailAddressSignIn.getText().toString().equals("admin@gmail.com") && editTextTextPasswordSignIn.getText().toString().equals("admin123")) {
+                        editTextEmailAddressSignIn.setText("");
+                        editTextTextPasswordSignIn.setText("");
+                        Intent intent = new Intent(getApplicationContext(), AdminProfile.class);
+                        startActivity(intent);
                     }
-
+                    else {
+                        Toast.makeText(getApplicationContext(), "Failed to Login, Please check your credentials", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            });
-        }
-        else{
-                Toast.makeText(getApplicationContext(), "Failed to Login, Please check your credentials", Toast.LENGTH_LONG).show();
-            }
-        }
+        });
+    }
 
     private String getTime() {
         return new SimpleDateFormat("hh:mm a", Locale.getDefault()).format(new Date());

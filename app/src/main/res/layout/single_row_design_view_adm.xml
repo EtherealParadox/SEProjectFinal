@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name is here"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Username is here"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Email is here"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textColor="#808080"
@@ -61,7 +61,7 @@
 
             <Button
                 android:id="@+id/buttonEditAdm"
-                android:layout_width="150dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/super_rounded"
                 android:text="Edit"
@@ -70,7 +70,7 @@
 
             <Button
                 android:id="@+id/buttonDeleteAdm"
-                android:layout_width="150dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/super_rounded"
                 android:text="Delete"

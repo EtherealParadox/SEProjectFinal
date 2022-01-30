@@ -18,7 +18,7 @@ import java.util.Locale;
 
 public class EmployeeProfile extends AppCompatActivity implements View.OnClickListener {
 
-    private Button buttonModifyEmp, buttonLocateEmp, buttonProfileEmp;
+    private Button buttonModifyEmp, buttonLocateEmp, buttonReportEmp, buttonProfileEmp;
 
     private FirebaseDatabase rootNode;
     private DatabaseReference reference;
@@ -33,6 +33,9 @@ public class EmployeeProfile extends AppCompatActivity implements View.OnClickLi
 
         buttonLocateEmp = findViewById(R.id.buttonLocateEmp);
         buttonLocateEmp.setOnClickListener(this);
+
+        buttonReportEmp = findViewById(R.id.buttonReportEmp);
+        buttonReportEmp.setOnClickListener(this);
 
         buttonProfileEmp = findViewById(R.id.buttonProfileEmp);
         buttonProfileEmp.setOnClickListener(this);
@@ -58,9 +61,13 @@ public class EmployeeProfile extends AppCompatActivity implements View.OnClickLi
                 Intent intent1 = new Intent(EmployeeProfile.this, LocateVisitor.class);
                 startActivity(intent1);
                 break;
-            case R.id.buttonProfileEmp:
-                Intent intent2 = new Intent(EmployeeProfile.this, EmployeeUserProfile.class);
+            case R.id.buttonReportEmp:
+                Intent intent2 = new Intent(EmployeeProfile.this, Report.class);
                 startActivity(intent2);
+                break;
+            case R.id.buttonProfileEmp:
+                Intent intent3 = new Intent(EmployeeProfile.this, EmployeeUserProfile.class);
+                startActivity(intent3);
                 break;
         }
     }

@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class AdminProfile extends AppCompatActivity implements View.OnClickListener {
 
-    private Button buttonModifyAdm, buttonLocateAdm, buttonLogoutAdm;
+    private Button buttonModifyAdm, buttonLogsAdm, buttonReportsAdm, buttonLogoutAdm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,11 @@ public class AdminProfile extends AppCompatActivity implements View.OnClickListe
         buttonModifyAdm = findViewById(R.id.buttonModifyAdm);
         buttonModifyAdm.setOnClickListener(this);
 
-        buttonLocateAdm = findViewById(R.id.buttonLogsAdm);
-        buttonLocateAdm.setOnClickListener(this);
+        buttonLogsAdm = findViewById(R.id.buttonLogsAdm);
+        buttonLogsAdm.setOnClickListener(this);
+
+        buttonReportsAdm = findViewById(R.id.buttonReportsAdm);
+        buttonReportsAdm.setOnClickListener(this);
 
         buttonLogoutAdm = findViewById(R.id.buttonLogoutAdm);
         buttonLogoutAdm.setOnClickListener(this);
@@ -50,9 +53,13 @@ public class AdminProfile extends AppCompatActivity implements View.OnClickListe
                 Intent intent1 = new Intent(AdminProfile.this, ViewLogs.class);
                 startActivity(intent1);
                 break;
-            case R.id.buttonLogoutAdm:
-                Intent intent2 = new Intent(AdminProfile.this, Home.class);
+            case R.id.buttonReportsAdm:
+                Intent intent2 = new Intent(AdminProfile.this, ViewReports.class);
                 startActivity(intent2);
+                break;
+            case R.id.buttonLogoutAdm:
+                Intent intent3 = new Intent(AdminProfile.this, Home.class);
+                startActivity(intent3);
                 break;
         }
     }

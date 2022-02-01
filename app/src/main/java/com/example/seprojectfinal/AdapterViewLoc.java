@@ -54,7 +54,7 @@ public class AdapterViewLoc extends FirebaseRecyclerAdapter<User, AdapterViewLoc
             public void onClick(android.view.View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.name.getContext())
                         .setContentHolder(new ViewHolder(R.layout.locate_popup))
-                        .setExpanded(true, 700)
+                        .setExpanded(true, 895)
                         .create();
 
                 android.view.View view = dialogPlus.getHolderView();

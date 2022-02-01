@@ -34,7 +34,7 @@ public class AdapterViewAdm extends FirebaseRecyclerAdapter<UserSignUp, AdapterV
     protected void onBindViewHolder(@NonNull AdapterViewAdm.myDataHolderAdm holder, int position, @NonNull UserSignUp model) {
         holder.name.setText("Name: " + model.getFname() + " " + model.getLname());
         holder.uname.setText("Username: " + model.getUname());
-        holder.email.setText("Email: \n" + model.getEmail());
+        holder.email.setText("Email: " + model.getEmail());
 
         holder.btnEdit.setOnClickListener(new android.view.View.OnClickListener() {
             @Override

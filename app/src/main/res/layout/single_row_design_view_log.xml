@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="#091349"
     android:elevation="8dp"
     app:cardUseCompatPadding="true">
 
@@ -17,52 +18,52 @@
             android:id="@+id/textViewEmailLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email is here"
-            android:textSize="17sp"
+            android:background="@drawable/top_rounded"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@drawable/top_rounded"
+            android:text="Email is here"
+            android:textColor="#000000"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewDateLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Date is here"
-            android:textSize="17sp"
+            android:layout_below="@+id/textViewEmailLog"
+            android:background="#66CCFF"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@color/teal_200"
-            android:textStyle="bold"
-            android:layout_below="@+id/textViewEmailLog"/>
+            android:text="Date is here"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewTimeLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Time is here"
-            android:textSize="17sp"
+            android:layout_below="@+id/textViewDateLog"
+            android:background="#0099CC"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@color/teal_200"
-            android:textStyle="bold"
-            android:layout_below="@+id/textViewDateLog"/>
+            android:text="Time is here"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewStatusLog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Status is here"
-            android:textSize="17sp"
+            android:layout_below="@+id/textViewTimeLog"
+            android:background="@drawable/bottom_rounded"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@drawable/bottom_rounded"
-            android:textStyle="bold"
-            android:layout_below="@+id/textViewTimeLog"/>
+            android:text="Status is here"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="#079BF5"
     tools:context=".AdminProfile">
 
     <LinearLayout
@@ -21,11 +21,11 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="183dp"
             android:layout_gravity="top"
             android:layout_marginBottom="35dp"
-            android:src="@drawable/lumine"
+            android:src="@drawable/imagebg"
             tools:layout_editor_absoluteX="30dp"
             tools:layout_editor_absoluteY="49dp" />
 
@@ -54,11 +54,13 @@
                     android:id="@+id/buttonModifyAdm"
                     android:layout_width="115dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="15dp"
-                    android:layout_gravity="center_vertical"
                     android:text="Modify"
+                    android:background="@drawable/btn_bg"
                     android:textAllCaps="false"
+                    android:textColor="#000000"
                     android:textSize="22sp" />
 
             </LinearLayout>
@@ -81,11 +83,13 @@
                     android:id="@+id/buttonLogsAdm"
                     android:layout_width="115dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="15dp"
-                    android:layout_gravity="center_vertical"
                     android:text="Logs"
+                    android:background="@drawable/btn_bg"
                     android:textAllCaps="false"
+                    android:textColor="#000000"
                     android:textSize="22sp" />
 
             </LinearLayout>
@@ -108,26 +112,29 @@
                     android:id="@+id/buttonReportsAdm"
                     android:layout_width="115dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="15dp"
-                    android:layout_gravity="center_vertical"
                     android:text="Reports"
+                    android:background="@drawable/btn_bg"
                     android:textAllCaps="false"
+                    android:textColor="#000000"
                     android:textSize="19.7sp" />
 
             </LinearLayout>
 
         </RelativeLayout>
 
-            <Button
-                android:id="@+id/buttonLogoutAdm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                android:text="Logout"
-                android:textSize="20sp"
-                android:backgroundTint="@color/teal_700"
-                android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/buttonLogoutAdm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/btn_bg"
+            android:text="Logout"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

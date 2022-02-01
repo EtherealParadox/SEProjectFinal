@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="#079BF5"
     tools:context=".Home">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -28,7 +28,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/rounded2"
-        android:scrollbars="none"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -183,22 +183,23 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="70dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/super_rounded"
+                android:background="@drawable/btn_bg"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="Confirm"
                 android:textAllCaps="false"
+                android:textColor="#000000"
                 android:textSize="24sp" />
         </LinearLayout>
     </ScrollView>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_width="250dp"
+        android:layout_height="95dp"
         android:layout_gravity="top"
         android:layout_margin="30dp"
-        android:src="@drawable/lumine"
+        android:src="@drawable/imagebg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

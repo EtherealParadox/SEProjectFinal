@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/bottom_rounded.xml" value="0.2203125" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/bottom_rounded3parts.xml" value="0.2203125" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/btn_bg.xml" value="0.2203125" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/ic_locate.xml" value="0.2203125" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/ic_signin.xml" value="0.2203125" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/rounded.xml" value="0.2203125" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/rounded2.xml" value="0.2203125" />
@@ -12,35 +15,37 @@
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/selector.xml" value="0.2203125" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/super_rounded.xml" value="0.2203125" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/drawable/top_rounded.xml" value="0.2203125" />
-        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_about.xml" value="0.20416666666666666" />
-        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_admin_profile.xml" value="0.33" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_about.xml" value="0.25" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_admin_profile.xml" value="0.22" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_employee_profile.xml" value="0.22" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_employee_user_profile.xml" value="0.25" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_forgot_password.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
-        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_info.xml" value="0.20416666666666666" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_info.xml" value="0.14450867052023122" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_locate_visitor.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_report.xml" value="0.20416666666666666" />
-        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
-        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_view.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_view_employee.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_view_logs.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_view_reports.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/activity_view_visitor.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/locate_popup.xml" value="0.20416666666666666" />
-        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/report_popup.xml" value="0.20416666666666666" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/report_popup.xml" value="0.12562814070351758" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/single_row_design_view.xml" value="0.20416666666666666" />
-        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/single_row_design_view_adm.xml" value="0.20416666666666666" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/single_row_design_view_adm.xml" value="0.12195121951219512" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/single_row_design_view_emp.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/single_row_design_view_loc.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/single_row_design_view_log.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/single_row_design_view_rep.xml" value="0.20416666666666666" />
-        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/update_popup.xml" value="0.20416666666666666" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/update_popup.xml" value="0.11363636363636363" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/layout/update_popup_adm.xml" value="0.20416666666666666" />
         <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/menu/menu_navigation.xml" value="0.20416666666666666" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/mipmap-anydpi-v26/ic_launcher2.png.xml" value="0.1125" />
+        <entry key="..\:/user/Documents/Android Studio Projects/SEProjectFinal/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1125" />
       </map>
     </option>
   </component>

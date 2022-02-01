@@ -4,32 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#079BF5"
     tools:context=".About">
 
     <Button
         android:id="@+id/buttonAbout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn_bg"
         android:text="Start"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAbout2" />
 
     <TextView
         android:id="@+id/textViewAbout2"
         android:layout_width="302dp"
-        android:layout_height="422dp"
-        android:layout_marginTop="36dp"
-        android:paddingRight="30dp"
-        android:paddingLeft="30dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="monospace"
         android:justificationMode="inter_word"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-        android:textSize="17sp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="This application has been implemented by the group of Code Breaker. Due to pandemic and people are traveling everyday the group create a mobile application that can be use to replace the Logbook way at Bataan Terminal Complex. \n\nCredits:
+        \nRomwel R. Feliciano
+        \nDenzel Eabraham V. Cezar
+        \nRhemzel Joy S. Dimaranan
+        \nKylah A. Camacho"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAbout" />
 
@@ -39,10 +49,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="About"
+        android:textColor="#000000"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/splashlogo"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

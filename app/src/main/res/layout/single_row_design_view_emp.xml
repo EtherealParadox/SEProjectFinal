@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="20dp"
     android:elevation="8dp"
+    app:cardBackgroundColor="#091349"
+    app:cardCornerRadius="20dp"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
@@ -17,60 +18,60 @@
             android:id="@+id/textViewNameEmp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name is here"
-            android:textSize="17sp"
+            android:background="@drawable/top_rounded"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@drawable/top_rounded"
+            android:text="Name is here"
+            android:textColor="#000000"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewContactEmp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contact is here"
-            android:textSize="17sp"
+            android:layout_below="@+id/textViewNameEmp"
+            android:background="#66CCFF"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@color/teal_200"
-            android:textStyle="bold"
-            android:layout_below="@+id/textViewNameEmp"/>
+            android:text="Contact is here"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewDateTimeEmp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DateTime is here"
-            android:textSize="17sp"
+            android:layout_below="@+id/textViewContactEmp"
+            android:background="#0099CC"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@color/teal_200"
-            android:textStyle="bold"
-            android:layout_below="@+id/textViewContactEmp"/>
+            android:text="DateTime is here"
+            android:textColor="#000000"
+            android:textSize="16.5sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewEmailEmp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email is here"
-            android:textSize="17sp"
+            android:layout_below="@+id/textViewDateTimeEmp"
+            android:background="@drawable/bottom_rounded"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@drawable/bottom_rounded"
-            android:textStyle="bold"
-            android:layout_below="@+id/textViewDateTimeEmp"/>
+            android:text="Email is here"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:orientation="horizontal"
+            android:layout_below="@id/textViewEmailEmp"
+            android:layout_marginTop="5dp"
             android:gravity="center_horizontal"
-            android:layout_below="@id/textViewEmailEmp">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/buttonEditEmp"
@@ -78,18 +79,20 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/super_rounded"
                 android:text="Edit"
-                android:textSize="17sp"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="17sp" />
 
             <Button
                 android:id="@+id/buttonDeleteEmp"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:background="@drawable/super_rounded"
                 android:text="Delete"
-                android:textSize="17sp"
                 android:textAllCaps="false"
-                android:layout_marginLeft="5dp"/>
+                android:textColor="#000000"
+                android:textSize="17sp" />
 
         </LinearLayout>
 

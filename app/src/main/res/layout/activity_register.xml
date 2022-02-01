@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="#079BF5"
     tools:context=".Register">
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_height="120dp"
         android:layout_gravity="top"
         android:layout_marginTop="40dp"
-        android:src="@drawable/lumine"
+        android:src="@drawable/imagebg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,27 +100,29 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/rounded"
+            android:drawableRight="@drawable/ic_visibility_off"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textCursorDrawable="@color/black"
-            android:drawableRight="@drawable/ic_visibility_off"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:textColor="#000000"
+            android:textCursorDrawable="@color/black"
             android:textSize="24sp" />
 
         <Button
             android:id="@+id/buttonRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:layout_gravity="center_horizontal"
             android:background="@drawable/super_rounded"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="Register"
-            android:textSize="24sp"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            android:textColor="#252121"
+            android:textSize="24sp" />
 
     </LinearLayout>
 

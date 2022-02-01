@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
+    android:background="#079BF5"
     android:orientation="vertical">
 
     <ScrollView
@@ -18,20 +18,23 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/teal_200"
+                android:background="#020b42"
                 android:gravity="center"
                 android:text="Update Details"
-                android:textColor="#00695C"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#000000"
                 android:textSize="25sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Temperature"
-                android:textSize="25sp"
-                android:gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Temperature"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextTemperatureGlideEmp"
@@ -42,19 +45,22 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
-                android:textCursorDrawable="@color/black"
                 android:gravity="center"
+                android:textColor="#000000"
+                android:textCursorDrawable="@color/black"
                 android:textSize="25sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name"
-                android:textSize="25sp"
-                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextNameGlideEmp"
@@ -65,19 +71,22 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
-                android:textCursorDrawable="@color/black"
                 android:gravity="center"
+                android:textColor="#000000"
+                android:textCursorDrawable="@color/black"
                 android:textSize="25sp"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Email"
-                android:textSize="25sp"
-                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Email"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextEmailGlideEmp"
@@ -88,19 +97,22 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
-                android:textCursorDrawable="@color/black"
                 android:gravity="center"
+                android:textColor="#000000"
+                android:textCursorDrawable="@color/black"
                 android:textSize="25sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Address"
-                android:textSize="25sp"
-                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Address"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextAddressGlideEmp"
@@ -111,19 +123,22 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
-                android:textCursorDrawable="@color/black"
                 android:gravity="center"
+                android:textColor="#000000"
+                android:textCursorDrawable="@color/black"
                 android:textSize="25sp"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Age"
-                android:textSize="25sp"
-                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Age"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextAgeGlideEmp"
@@ -134,19 +149,22 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
-                android:textCursorDrawable="@color/black"
                 android:gravity="center"
+                android:textColor="#000000"
+                android:textCursorDrawable="@color/black"
                 android:textSize="25sp"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Gender"
-                android:textSize="25sp"
-                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Gender"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextGenderGlideEmp"
@@ -157,19 +175,22 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
-                android:textCursorDrawable="@color/black"
                 android:gravity="center"
+                android:textColor="#000000"
+                android:textCursorDrawable="@color/black"
                 android:textSize="25sp"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Symptoms"
-                android:textSize="25sp"
-                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Symptoms"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextSymptomsGlideEmp"
@@ -180,19 +201,22 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
-                android:textCursorDrawable="@color/black"
                 android:gravity="center"
+                android:textColor="#000000"
+                android:textCursorDrawable="@color/black"
                 android:textSize="25sp"
                 tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contact Number"
-                android:textSize="25sp"
-                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Contact Number"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextNumberGlideEmp"
@@ -203,44 +227,50 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/rounded_frame"
-                android:textCursorDrawable="@color/black"
                 android:gravity="center"
+                android:textColor="#000000"
+                android:textCursorDrawable="@color/black"
                 android:textSize="25sp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Destination"
-                android:textSize="25sp"
-                android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Destination"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/editTextDestinationGlideEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:background="@drawable/rounded_frame"
-                android:textCursorDrawable="@color/black"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rounded_frame"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textCursorDrawable="@color/black"
+                android:textSize="25sp" />
 
             <Button
                 android:id="@+id/btnUpdateEmp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Update"
-                android:textSize="26dp"
-                android:background="@drawable/super_rounded"
-                android:layout_marginRight="90dp"
                 android:layout_marginLeft="90dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginRight="90dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/super_rounded"
+                android:text="Update"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textSize="26dp" />
 
         </LinearLayout>
 

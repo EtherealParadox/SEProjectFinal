@@ -148,8 +148,14 @@ public class Home extends AppCompatActivity {
             return;
         }
 
+        if (contact.length() < 11) {
+            editTextContactHome.setError("Contact length must be 11 digits");
+            editTextContactHome.requestFocus();
+            return;
+        }
+
         if (contact.length() > 11) {
-            editTextContactHome.setError("Contact length is only 11 numbers!");
+            editTextContactHome.setError("Contact length must be 11 digits");
             editTextContactHome.requestFocus();
             return;
         }
@@ -165,7 +171,7 @@ public class Home extends AppCompatActivity {
         dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getApplicationContext(), "Entering your data to the database", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Added Successfully", Toast.LENGTH_SHORT).show();
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("Visitors");
                 User user = new User(temperature, name, email, address, age, gender, symptoms, contact, destination, getDate(),getTime());

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="#079BF5"
     tools:context=".EmployeeUserProfile">
 
     <LinearLayout
@@ -42,10 +42,11 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/rounded"
             android:hint=""
-            android:textColor="@color/teal_800"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:textSize="22sp" />
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewUserNameEup"
@@ -56,10 +57,11 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/rounded"
             android:hint=""
-            android:textColor="@color/teal_800"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:textSize="22sp" />
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewEmailEup"
@@ -70,10 +72,11 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/rounded"
             android:hint=""
-            android:textColor="@color/teal_800"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:textSize="22sp" />
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonLogoutEup"
@@ -88,6 +91,7 @@
             android:paddingRight="10dp"
             android:text="Log out"
             android:textAllCaps="false"
+            android:textColor="#000000"
             android:textSize="24sp" />
 
     </LinearLayout>

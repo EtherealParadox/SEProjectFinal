@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="#091349"
     android:elevation="8dp"
     app:cardUseCompatPadding="true">
 
@@ -17,39 +18,39 @@
             android:id="@+id/textViewNameAdm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name is here"
-            android:textSize="17sp"
+            android:background="@drawable/top_rounded"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@drawable/top_rounded"
+            android:text="Name is here"
+            android:textColor="#040404"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewUsernameAdm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Username is here"
-            android:textSize="17sp"
+            android:layout_below="@+id/textViewNameAdm"
+            android:background="#66CCFF"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@color/teal_200"
-            android:textStyle="bold"
-            android:layout_below="@+id/textViewNameAdm"/>
+            android:text="Username is here"
+            android:textColor="#040404"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewEmailAdm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email is here"
-            android:textSize="17sp"
+            android:layout_below="@+id/textViewUsernameAdm"
+            android:background="@drawable/bottom_rounded3parts"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:textColor="#808080"
-            android:background="@drawable/bottom_rounded"
-            android:textStyle="bold"
-            android:layout_below="@+id/textViewUsernameAdm"/>
+            android:paddingRight="10dp"
+            android:text="Email is here"
+            android:textColor="#040404"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_marginTop="5dp"
@@ -65,18 +66,20 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/super_rounded"
                 android:text="Edit"
-                android:textSize="17sp"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                android:textColor="#040404"
+                android:textSize="17sp" />
 
             <Button
                 android:id="@+id/buttonDeleteAdm"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:background="@drawable/super_rounded"
                 android:text="Delete"
-                android:textSize="17sp"
                 android:textAllCaps="false"
-                android:layout_marginLeft="5dp"/>
+                android:textColor="#040404"
+                android:textSize="17sp" />
 
         </LinearLayout>
 

@@ -35,7 +35,7 @@ public class AdapterViewRep extends FirebaseRecyclerAdapter <UserReport, Adapter
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.email.getContext())
                         .setContentHolder(new ViewHolder(R.layout.report_popup))
-                        .setExpanded(true, 950)
+                        .setExpanded(true, 1200)
                         .create();
 
                 android.view.View view = dialogPlus.getHolderView();

@@ -48,7 +48,7 @@ public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp
     protected void onBindViewHolder(@NonNull myDataHolderEmp holder, int position, @NonNull User model) {
         holder.name.setText("Name: " + model.getName());
         holder.contact.setText("Contact: " + model.getContact());
-        holder.datetime.setText("Date & Time: " + model.getDate() + ", " + model.getTime());
+        holder.datetime.setText("Date & Time: \n" + model.getDate() + ", " + model.getTime());
         holder.email.setText("Email: " + model.getEmail());
 
         holder.btnEdit.setOnClickListener(new android.view.View.OnClickListener() {
@@ -56,7 +56,7 @@ public class AdapterViewEmp extends FirebaseRecyclerAdapter<User, AdapterViewEmp
             public void onClick(android.view.View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.name.getContext())
                         .setContentHolder(new ViewHolder(R.layout.update_popup))
-                        .setExpanded(true, 1000)
+                        .setExpanded(true, 1200)
                         .create();
 
                 android.view.View view = dialogPlus.getHolderView();

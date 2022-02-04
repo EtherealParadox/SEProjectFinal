@@ -23,20 +23,20 @@
 
     <TextView
         android:id="@+id/textViewAbout2"
-        android:layout_width="302dp"
-        android:layout_height="340dp"
+        android:layout_width="303dp"
+        android:layout_height="385dp"
         android:layout_marginTop="32dp"
         android:fontFamily="monospace"
         android:justificationMode="inter_word"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:text="This application has been implemented by the group of Code Breaker. Due to pandemic and people are traveling everyday the group create a mobile application that can be use to replace the Logbook way at Bataan Terminal Complex. \n\nCredits:
+        android:text="This application has been implemented by the group of Code Breaker. Due to pandemic and people are traveling everyday the group create a mobile application that can be use to replace the Logbook way at Bataan Terminal Complex. \n\n© Code Breaker (2022)
         \nRomwel R. Feliciano
         \nDenzel Eabraham V. Cezar
         \nRhemzel Joy S. Dimaranan
         \nKylah A. Camacho"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="19sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

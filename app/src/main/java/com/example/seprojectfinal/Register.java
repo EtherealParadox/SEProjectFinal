@@ -160,7 +160,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                                 }
                             });
                         } else {
-                            Toast.makeText(Register.this, "Failed to , Try again", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Register.this, "Failed to register, Try again", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
